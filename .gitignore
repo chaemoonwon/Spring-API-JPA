@@ -1,0 +1,10 @@
+jpashop/src/main/generated/jpabook/jpashop/domain/QAddress.java
+jpashop/src/main/generated/jpabook/jpashop/domain/QCategory.java
+jpashop/src/main/generated/jpabook/jpashop/domain/QDelivery.java
+jpashop/src/main/generated/jpabook/jpashop/domain/QMember.java
+jpashop/src/main/generated/jpabook/jpashop/domain/QOrder.java
+jpashop/src/main/generated/jpabook/jpashop/domain/QOrderItem.java
+jpashop/src/main/generated/jpabook/jpashop/domain/item/QAlbum.java
+jpashop/src/main/generated/jpabook/jpashop/domain/item/QBook.java
+jpashop/src/main/generated/jpabook/jpashop/domain/item/QItem.java
+jpashop/src/main/generated/jpabook/jpashop/domain/item/QMovie.java

@@ -36,7 +36,7 @@ public class OrderSimpleApiController {
 
     @GetMapping("/api/v1/simple-orders")
     public List<Order> ordersV1() {
-        List<Order> all = orderRepository.findAllByCriteria(new OrderSearch());
+        List<Order> all = orderRepository.findAll(new OrderSearch());
 
         for (Order order : all) {
             order.getMember().getName();    //LAZY 강제 초기화
@@ -48,7 +48,7 @@ public class OrderSimpleApiController {
 
     @GetMapping("/api/v2/simple-orders")
     public List<SimpleOrderDto> ordersV2() {
-        List<Order> orders = orderRepository.findAllByCriteria(new OrderSearch());
+        List<Order> orders = orderRepository.findAll(new OrderSearch());
         List<SimpleOrderDto> result = orders.stream()
                 .map(o -> new SimpleOrderDto(o))
                 .collect(toList());
@@ -61,7 +61,7 @@ public class OrderSimpleApiController {
     public List<SimpleOrderDto> ordersV3() {
         List<Order> orders = orderRepository.findAllWithMemberDelivery();
         return orders.stream()
-                .map(o -> new SimpleOrderDto(o))
+                .map(o -> new SimpleOrderDto((Order) o))
                 .collect(Collectors.toList());
     }
 
